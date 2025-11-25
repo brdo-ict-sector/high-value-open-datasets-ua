@@ -1,0 +1,14 @@
+project:
+  type: website
+  output-dir: docs # Crucial: tells Quarto where to put the files
+
+website:
+  title: "My Quarto Site"
+  navbar:
+    left:
+      - text: "Home"
+        file: index.qmd # Or whatever your main file is named
+
+format:
+  html:
+    theme: cosmo
