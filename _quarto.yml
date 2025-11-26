@@ -1,9 +1,12 @@
 project:
   type: website
-  output-dir: docs # Crucial: tells Quarto where to put the files
+  output-dir: docs
 
 website:
-  title: false
+  title: ""          # Metadata title (keeps browser tab clean)
+  navbar:
+    title: false     # Removes "My Quarto Site" from the visual header
+    left: []         # explicitly empty list removes "Home"
 
 format:
   html:
