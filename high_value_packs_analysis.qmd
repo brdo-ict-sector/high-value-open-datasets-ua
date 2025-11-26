@@ -52,7 +52,7 @@ df |> distinct(org_name_postanova) |> nrow()
 
 Загалом постанова зобов'язує `r df |> distinct(org_name_postanova) |> nrow()` розпорядників оприлюднити `r df |> distinct(org_name_postanova, required_dataset) |> nrow()` набори високої цінності.
 
-BRDO проаналізував повноту оприлюднення цих наборів розпорядниками, вчасність оновлення та використовувані формати файлів (ресурсів). Інформація зібрана станом на 01 листопада 2025 року, для збору використали API Порталу відкритих даних. Отримані для цього аналізу дані викладені тут у табличному форматі.
+BRDO проаналізував повноту оприлюднення цих наборів розпорядниками, вчасність оновлення та використовувані формати файлів (ресурсів). Інформація зібрана станом на 01 листопада 2025 року, для збору використали API Порталу відкритих даних. Отримані для цього аналізу дані викладені [тут у табличному форматі](https://github.com/brdo-ict-sector/high-value-open-datasets-ua/tree/main/data). Проєкт на GitHub доступний за [цим посиланням](https://github.com/brdo-ict-sector/high-value-open-datasets-ua).
 
 ### Перелік наборів високої цінності
 
@@ -551,3 +551,14 @@ package_formats |>
 ```
 
 Проблема із використанням неструктурованих форматів полягає в тому, що такі формати потребують набагато більше часу на обробку для машинного використання, що створює непотрібні перешкоди для бізнесу, дослідників та громадян, які працюють з державними відкритими даними.
+
+```{r}
+#| include: false
+
+setwd("C:/Users/MykolaKuzin/OneDrive - NGO 'BETTER REGULATION DELIVERY OFFICE'/Desktop/projects/open_data/github_high_value_datasets/high-value-open-datasets-ua/data")
+
+writexl::write_xlsx(package_formats, 'resources_formats - 2025-11-01.xlsx')
+
+writexl::write_xlsx(df, 'datasets_data - 2025-11-01.xlsx')
+
+```
