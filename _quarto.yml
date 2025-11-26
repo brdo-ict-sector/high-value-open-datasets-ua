@@ -3,10 +3,7 @@ project:
   output-dir: docs # Crucial: tells Quarto where to put the files
 
 website:
-  title: "Набори високої цінності"
-  navbar:
-    left:
-        file: index.qmd # Or whatever your main file is named
+  title: false
 
 format:
   html:
